@@ -9,4 +9,13 @@ def user_input():
     }
     return month,salary,percentage
 month,salary,percentage=user_input()
-print(percentage)
+# print(percentage)
+
+def percentage_amount(salary,percentage):
+    percamount={}
+    for percent,percvalue in percentage.items():
+        percamount[percent]=(percvalue/100)*salary
+    return  percamount  
+    
+percamount=percentage_amount(salary,percentage)    
+print(percamount)
